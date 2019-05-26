@@ -5,10 +5,9 @@ const API_POPULAR_URL = 'movie/popular'
 const fs = require('fs')
 
 const favDir = __dirname + '/../data/favList'
+const URL_IMAGE = 'http://image.tmdb.org/t/p/w185/'
 
 APIPopular = async (req, res, next) => {
-    const URL_IMAGE = 'http://image.tmdb.org/t/p/w185/'
-    console.log('FUNCIONANDO')
     const generate = await axios.get(API_URL + API_POPULAR_URL + API_KEY)
     let results = generate.data.results
 
@@ -21,6 +20,12 @@ APIPopular = async (req, res, next) => {
     } catch (error) {
         console.error(error);
     }
+}
+
+giveResults = async () => {
+        console.log('FUNCIONANDO')
+        const generate = await axios.get(API_URL + API_POPULAR_URL + API_KEY)
+        return generate.data
 }
 
 APIFilmByID = (req, res) => {
@@ -86,6 +91,7 @@ likeInFilm = async (req, res) => {
 
 module.exports = {
     APIPopular,
+    giveResults,
     APIFilmByID,
     likeInFilm
 }

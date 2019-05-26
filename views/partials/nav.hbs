@@ -1,21 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand text-white" href="/">myFilmsApp</a>
+  <a class="navbar-brand" href="/">myFilmsApp</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link text-white" href="/peliculas/A-Z">Alfabético</a>
+        <a class="text-white nav-link" href="/byTitle">Alfabético</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/peliculas/nota">Valoración</a>
+        <a class="text-white nav-link" href="/byRate">Valoración</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/peliculas/fecha">Lanzamiento</a>
+        <a class="text-white nav-link" href="/byDate">Lanzamiento</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Búsqueda</button>
+    <form class="form-inline my-2 my-lg-0" action="/search">
+      <input class="form-control mr-sm-2" name="searchTitles" type="text" placeholder="Búsqueda">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="far fa-eye"></i> GO!</button>
     </form>
   </div>
 </nav>
