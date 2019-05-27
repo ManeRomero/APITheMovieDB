@@ -57,4 +57,9 @@ body {
   color: crimson;
 }
 
+#myCarousel {
+  display: flex;
+  margin: auto;
+}
+
 /*# sourceMappingURL=style.css.map */

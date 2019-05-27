@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var connect = require('../controllers/apiconnect')
+var connect = require('../controllers/index')
 var sorter = require('../controllers/sorters')
 
 router.get('/', connect.APIPopular)

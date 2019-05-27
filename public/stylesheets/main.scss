@@ -43,7 +43,6 @@ body {
 }
 
 .card {
-
     a,
     a:hover {
         color: black;
@@ -64,4 +63,9 @@ body {
         font-size: 3em;
         color: crimson
     }
+}
+
+#myCarousel {
+    display: flex;
+    margin: auto
 }

@@ -1,8 +1,8 @@
-const connect = require('./apiconnect')
+const connect = require('./connections')
 const URL_IMAGE = 'http://image.tmdb.org/t/p/w185/'
 
 byTitle = (req, res) => {
-    connect.giveResults()
+    connect.getPopularFilms()
         .then((peliculas) => {
 
             let results = peliculas.results
@@ -27,7 +27,7 @@ byTitle = (req, res) => {
 }
 
 byRating = (req, res) => {
-    connect.giveResults()
+    connect.getPopularFilms()
         .then((peliculas) => {
 
             let results = peliculas.results
@@ -54,7 +54,7 @@ byRating = (req, res) => {
 }
 
 byRelease = (req, res) => {
-    connect.giveResults()
+    connect.getPopularFilms()
         .then((peliculas) => {
 
             let results = peliculas.results
@@ -71,9 +71,6 @@ byRelease = (req, res) => {
                 }
 
                 return 0
-
-
-
             })
 
             res.render('index', {
@@ -81,7 +78,6 @@ byRelease = (req, res) => {
                 results
             })
         })
-
 }
 
 module.exports = {

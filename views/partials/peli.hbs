@@ -1,17 +1,11 @@
-<div class="row mt-4">
-    {{#each results}}
     <div class="card col-lg-3 col-md-6 text-center" title="{{release_date}}">
         <a href="/pelicula/{{id}}">
-        <div class="card-header">
-            <h3>{{title}}</h3>
-        </div>
         <div class="card-body">
-            <img src="{{../URL_IMAGE}}{{poster_path}}" alt="">
+            <img src="{{URL_IMAGE}}{{poster_path}}" alt="">
         </div>
         <div class="card-footer">
+            <h3>{{title}}</h3>
             <small>{{vote_average}}</small>
         </div>
         </a>
     </div>
-    {{/each}}
-</div>
